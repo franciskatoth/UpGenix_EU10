@@ -5,7 +5,7 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
 
-public class FillOutMessage_StepDefinition extends LogInPage {
+public class AC3_FillOutMessage_StepDefinition extends LogInPage {
 
     LogInPage logInPage = new LogInPage();
 

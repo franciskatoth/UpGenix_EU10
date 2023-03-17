@@ -1,17 +1,14 @@
 package com.upgenix.step_definitions;
 
 import com.upgenix.pages.LogInPage;
-import com.upgenix.utilies.BrowserUtils;
 import com.upgenix.utilies.ConfigurationReader;
 import com.upgenix.utilies.Driver;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
-import java.io.FileInputStream;
-import java.io.InputStream;
 import java.util.Properties;
 
-public class LogIn_StepDefinition {
+public class AC1_LogIn_StepDefinition {
 
     LogInPage logInPage = new LogInPage();
     Properties properties = new Properties();

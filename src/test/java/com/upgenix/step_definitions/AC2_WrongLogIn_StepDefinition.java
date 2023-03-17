@@ -9,7 +9,7 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
 
-public class WrongLogIn_StepDefinition extends LogInPage {
+public class AC2_WrongLogIn_StepDefinition extends LogInPage {
 
     WrongLogInPassword wrongLogInPassword = new WrongLogInPassword();
     LogInPage logInPage = new LogInPage();
