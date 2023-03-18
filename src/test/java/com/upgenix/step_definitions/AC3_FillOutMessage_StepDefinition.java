@@ -9,6 +9,7 @@ public class AC3_FillOutMessage_StepDefinition extends LogInPage {
 
     LogInPage logInPage = new LogInPage();
 
+
     @When("User enters {string}")
     public void user_enters(String email) {
        logInPage.emailBox.sendKeys(email);
@@ -20,5 +21,7 @@ public class AC3_FillOutMessage_StepDefinition extends LogInPage {
        Boolean required = Boolean.parseBoolean(logInPage.passwordBox.getAttribute("required"));
         Assert.assertEquals(true,required);
     }
+
+
 
 }

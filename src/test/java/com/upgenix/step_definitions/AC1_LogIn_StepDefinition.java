@@ -1,10 +1,14 @@
 package com.upgenix.step_definitions;
 
+import com.upgenix.pages.FillOutMessage;
 import com.upgenix.pages.LogInPage;
+import com.upgenix.pages.WrongLogInPassword;
 import com.upgenix.utilies.ConfigurationReader;
 import com.upgenix.utilies.Driver;
+import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import org.junit.Assert;
 
 import java.util.Properties;
 
@@ -12,6 +16,8 @@ public class AC1_LogIn_StepDefinition {
 
     LogInPage logInPage = new LogInPage();
     Properties properties = new Properties();
+    FillOutMessage fillOutMessage = new FillOutMessage();
+    WrongLogInPassword wrongLogInPassword = new WrongLogInPassword();
 
 
     @When("User in on log in page")
@@ -38,9 +44,9 @@ public class AC1_LogIn_StepDefinition {
     public void user_clicks_on_the_log_in_button() {
         logInPage.loginButton.click();
 
-
-
     }
+
+
 
 
 }
