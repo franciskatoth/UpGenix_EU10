@@ -6,9 +6,9 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class LogInPage {
+public class LogInFunctionality {
 
-    public LogInPage(){
+    public LogInFunctionality(){
         PageFactory.initElements(Driver.getDriver(), this);
     }
 
@@ -26,10 +26,15 @@ public class LogInPage {
         emailBox.sendKeys(ConfigurationReader.getProperty("web.email.address"));
 
     }
+    @FindBy(xpath = "//p[@class='alert alert-danger']")
+    public WebElement messageDisplayed;
 
     public void loginWithConfPassword(){
         passwordBox.sendKeys(ConfigurationReader.getProperty("web.password"));
     }
+
+
+
 
 
 }
