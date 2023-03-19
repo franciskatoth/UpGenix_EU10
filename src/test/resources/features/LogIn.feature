@@ -74,7 +74,8 @@ Feature: User should be able to login
 	@UPGNX10-236
 	Scenario: Verify - "Please fill out this field" message should be displayed if the password or username is empty
 		Given  user is on the login page
-		When User enters "salesmanager15@info.com"
+		When username input box is empty
+		And user enter "salesmanager"
 		And User press login button
 		Then user see Please fill out this field message should be displayed if the password or username is empty
 
@@ -83,7 +84,6 @@ Feature: User should be able to login
 
 			#AC4- User should see the password in bullet signs by default while typing (like ****)
 	@UPGNX10-238 @wip
-	Scenario: Verify User should see the password in bullet signs by default while typing (like ****)
 	Scenario: User should see the password in bullet signs by default while typing (like ****)
 		Given user is on the login page
 		When user enters "salesmanager15@info.com"

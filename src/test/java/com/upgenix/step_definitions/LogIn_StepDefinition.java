@@ -78,6 +78,12 @@ public class LogIn_StepDefinition {
     }
 
 
+    @When("username input box is empty")
+    public void username_input_box_is_empty() {
+      logInPage.passwordBox.sendKeys("");
+    }
+
+
     @Then("user see Please fill out this field message should be displayed if the password or username is empty")
     public void user_see_please_fill_out_this_field_message_should_be_displayed_if_the_password_or_username_is_empty() {
         Boolean required = Boolean.parseBoolean(logInPage.passwordBox.getAttribute("required"));
@@ -97,9 +103,17 @@ public class LogIn_StepDefinition {
     @Then("user should see bullet signs by default")
     public void user_should_see_bullet_signs_by_default() {
 
+        /*
         Boolean isBullet = logInPage.passwordBox.getAttribute("type").equals("password");
         Assert.assertEquals(isBullet,true);
 
+         */
+
+        if (logInPage.passwordBox.getAttribute("type").equals("password")){
+            Assert.assertTrue(true);
+        }else {
+            Assert.assertTrue(false);
+        }
     }
 
 }
