@@ -44,6 +44,15 @@ public class LogIn_StepDefinition {
 
     }
 
+    @Then("user should be on the homepage")
+    public void user_should_be_on_the_homepage() {
+
+        String expectedTitle = "#Inbox - Odoo";
+        String actualTitle = Driver.getDriver().getTitle();
+        Assert.assertTrue(actualTitle.contains("Odoo"));
+
+    }
+
     @Given("user is on the login page")
     public void user_is_on_the_login_page() {
         Driver.getDriver().get(ConfigurationReader.getProperty("url"));

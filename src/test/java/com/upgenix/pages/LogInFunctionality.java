@@ -22,6 +22,7 @@ public class LogInFunctionality {
     @FindBy(xpath = "//button[@type='submit']")
     public WebElement loginButton;
 
+
     public void loginWithConfigEmail(){
         emailBox.sendKeys(ConfigurationReader.getProperty("web.email.address"));
 

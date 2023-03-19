@@ -9,6 +9,7 @@ Feature: User should be able to login
 		Then User enters "salesmanager15@info.com" address
 		And user enter "salesmanager"
 		Then user clicks on the log in button
+		Then user should be on the homepage
 
 
 
@@ -73,7 +74,7 @@ Feature: User should be able to login
 	@UPGNX10-236
 	Scenario: Verify - "Please fill out this field" message should be displayed if the password or username is empty
 		Given  user is on the login page
-		When User enters "salesmanager5@info.com"
+		When User enters "salesmanager15@info.com"
 		And User press login button
 		Then user see Please fill out this field message should be displayed if the password or username is empty
 
