@@ -7,6 +7,7 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
+import org.openqa.selenium.Keys;
 
 import java.util.Properties;
 
@@ -115,5 +116,15 @@ public class LogIn_StepDefinition {
             Assert.assertTrue(false);
         }
     }
+
+
+    @Then("user press Enter from keyboard")
+    public void user_press_enter_from_keyboard() {
+        logInPage.loginButton.sendKeys(Keys.ENTER);
+        String title = Driver.getDriver().getTitle();
+        Assert.assertTrue(title.contains("Odoo"));
+
+    }
+
 
 }

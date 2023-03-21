@@ -92,6 +92,16 @@ Feature: User should be able to login
 
 
 
+			#AC5- Verify if the ‘Enter’ key of the keyboard is working correctly on the login page.
+	@UPGNX10-256
+	Scenario: Verify  if the ‘Enter’ key of the keyboard is working correctly on the login page.
+		Given  user is on the login page
+		When User enters "salesmanager15@info.com" and "salesmanager"
+		Then user press Enter from keyboard
+		Then user should be on the homepage
+
+
+
 
 
 
