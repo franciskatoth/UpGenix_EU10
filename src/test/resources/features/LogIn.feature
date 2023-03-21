@@ -1,4 +1,5 @@
 
+@smoke
 Feature: User should be able to login
 
 	#AC1-Users can log in with valid credentials (We have 5 types of users but will test only 2 user: PosManager, SalesManager)
@@ -83,7 +84,7 @@ Feature: User should be able to login
 
 
 			#AC4- User should see the password in bullet signs by default while typing (like ****)
-	@UPGNX10-238 @wip
+	@UPGNX10-238
 	Scenario: User should see the password in bullet signs by default while typing (like ****)
 		Given user is on the login page
 		When user enters "salesmanager15@info.com"
